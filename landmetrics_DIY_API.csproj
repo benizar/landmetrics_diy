@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0E385868-3DEE-43D5-A178-085C1D47BD23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>landmetrics_DIY_API</RootNamespace>
+    <AssemblyName>landmetrics_DIY_API</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>landmetrics_DIY_API.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>landmetrics_DIY_API.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="GeoAPI">
+      <HintPath>libs\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite">
+      <HintPath>libs\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjNET">
+      <HintPath>libs\ProjNET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DIY_core\Geometry\GeometryCoreReader.cs" />
+    <Compile Include="DIY_core\Geometry\GeometryCore_shapefiles.cs" />
+    <Compile Include="DIY_core\Geometry\GeometryReader.cs" />
+    <Compile Include="DIY_core\Geometry\IGeometry.cs" />
+    <Compile Include="DIY_core\Geometry\IGeometryCore.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_CoreAreaPercentOfLandscape_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_CoreArea_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_DisjunctCoreAreaDensity_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_EdgeDens_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_LandscapePercent_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_LargestPatchIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_LargestPatchSize_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_MeanPatchSize_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_NumDisjunctCoreArea_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_NumPatches_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_PatchDens_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_Perimeter_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\C_Area_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_Area_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_DisjunctCoreAreaDensity_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_EdgeDensity_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_LargestPatchIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_ModifiedSimpsonsDiversityIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_ModifiedSimpsonsEvennessIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_NumberOfDisjunctCoreAreas_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_NumCategories_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_NumLandscapePatches_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_PatchesDensity_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_PatchRichnessDensity_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_Perimeter_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_ShannonsDiversityIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_ShannonsEvennessIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_ShapeIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_SimpsonsDiversityIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_SimpsonsEvennessIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\L_TotalCoreArea_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\P_Area_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\P_CoreAreaIndex_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\P_CoreArea_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\P_FractalDimension_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\P_NumCoreAreas_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\P_PerimeterAreaRatio_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\P_Perimeter_V.cs" />
+    <Compile Include="DIY_core\SchemaDB\SchemaDB.cs" />
+    <Compile Include="DIY_core\SchemaDB\SchemaDB_Reader.cs" />
+    <Compile Include="DIY_enums\VectorMetrics\Options_Category_AreaDensEdge_vec.cs" />
+    <Compile Include="DIY_reports\Mixed\Join_Datatables.cs" />
+    <Compile Include="DIY_reports\Vector\List_Category_AreaDensEdge.cs" />
+    <Compile Include="DIY_reports\Vector\List_Category_CoreAreaMetrics.cs" />
+    <Compile Include="DIY_reports\Vector\List_Patch_AreaDensEdge.cs" />
+    <Compile Include="DIY_reports\Vector\List_Patch_CoreAreaMetrics.cs" />
+    <Compile Include="DIY_reports\Vector\List_Patch_ShapeMetrics.cs" />
+    <Compile Include="DIY_reports\Vector\List_Landscape_AreaDensEdge.cs" />
+    <Compile Include="DIY_reports\Vector\List_Landscape_CoreAreaMetrics.cs" />
+    <Compile Include="DIY_reports\Vector\List_Landscape_DiversityMetrics.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Category_AreaDensEdge_V.cs">
+    </Compile>
+    <Compile Include="DIY_core\Metrics\Raster\Category_Contagion.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Category_ContrastMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Category_CoreAreaMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Category_ShapeMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Patch_AreaDensEdge_V.cs" />
+    <Compile Include="DIY_core\Geometry\Geometry_shapefiles.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Patch_ContrastMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Patch_CoreAreaMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Patch_ShapeMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Landscape_AreaDensEdge_V.cs" />
+    <Compile Include="DIY_core\Metrics\Raster\Landscape_Contagion.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Landscape_ContrastMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Landscape_CoreAreaMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Landscape_DiversityMetrics_V.cs" />
+    <Compile Include="DIY_core\Metrics\Vector\Landscape_ShapeMetrics_V.cs" />
+    <Compile Include="DIY_reports\Vector\Obj_Category_AreaDensEdge.cs" />
+    <Compile Include="DIY_reports\Vector\Obj_Category_CoreAreaMetrics.cs" />
+    <Compile Include="DIY_reports\Vector\Obj_Patch_AreaDensEdge.cs" />
+    <Compile Include="DIY_reports\Vector\Obj_Patch_CoreAreaMetrics.cs" />
+    <Compile Include="DIY_reports\Vector\Obj_Patch_ShapeMetrics.cs" />
+    <Compile Include="DIY_reports\Vector\Obj_Landscape_AreaDensEdge.cs" />
+    <Compile Include="DIY_reports\Vector\Obj_Landscape_CoreAreaMetrics.cs" />
+    <Compile Include="DIY_reports\Vector\Obj_Landscape_DiversityMetrics.cs" />
+    <Compile Include="DIY_enums\VectorMetrics\Options_Category_CoreAreaMetrics_vec.cs" />
+    <Compile Include="DIY_enums\VectorMetrics\Options_Landscape_AreaDensEdge_vec.cs" />
+    <Compile Include="DIY_enums\VectorMetrics\Options_Landscape_CoreAreaMetrics_vec.cs" />
+    <Compile Include="DIY_enums\VectorMetrics\Options_Landscape_DiversityMetrics_vec.cs" />
+    <Compile Include="DIY_enums\VectorMetrics\Options_Patch_AreaDensEdge_vec.cs" />
+    <Compile Include="DIY_enums\VectorMetrics\Options_Patch_CoreAreaMetrics_vec.cs" />
+    <Compile Include="DIY_enums\VectorMetrics\Options_Patch_ShapeMetrics_vec.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DIY_core\SchemaDB\SchemaDB_shapefiles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DIY_core\RasterDB\" />
+    <Folder Include="DIY_core\Raster\" />
+    <Folder Include="DIY_enums\RasterMetrics\" />
+    <Folder Include="DIY_reports\Raster\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
